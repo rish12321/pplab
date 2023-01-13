@@ -2,10 +2,12 @@
 #include<stdlib.h>
 #include<omp.h>
 //fib
-int fib(int n){
+int fib(int n)
+{
     int a=0,b=1,t;
     #pragma omp parallel for  schedule(static,2) 
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
+    {
         #pragma omp critical
         {
             t = a+b;
