@@ -11,11 +11,14 @@ int isprime(int n){
     return 1;
 }
 
-void main(){
+void main()
+{
     int i=0,n=1000,x=2,primes[1100];
+    
     double start = omp_get_wtime();
     #pragma omp parallel
-    while(i<n){
+    while(i<n)
+    {
         if(isprime(x)){
             primes[i] = x;
             #pragma omp atomic 
@@ -29,8 +32,10 @@ void main(){
 
     i=0;x=2;
     start =omp_get_wtime();
-    while(i<n){
-        if(isprime(x)){
+    while(i<n)
+    {
+        if(isprime(x))
+        {
             primes[i] = x;
             i++;
         }
