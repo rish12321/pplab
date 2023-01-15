@@ -17,7 +17,7 @@ void main()
     
     double start = omp_get_wtime();
     #pragma omp parallel
-    while(i<n)
+    while(x<n)
     {
         if(isprime(x)){
             primes[i] = x;
@@ -32,7 +32,7 @@ void main()
 
     i=0;x=2;
     start =omp_get_wtime();
-    while(i<n)
+    while(x<n)
     {
         if(isprime(x))
         {
